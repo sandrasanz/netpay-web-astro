@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LegacyNavbar from '../components/LegacyNavbar.astro';
+import FooterLegacy from '../components/FooterLegacy.astro';
+import Person from '../components/schema/Person.astro';
+import AboutPage from '../components/schema/AboutPage.astro';
+---
+<BaseLayout
+  title="About NetPay — Built for People Paid by the Hour"
+  description="Why we built NetPay UK: real-time take-home pay tracking for hourly, shift, and variable-income workers. One app for tax, NI, pension, and net pay."
+  ogDescription="Why we built NetPay UK: real-time take-home pay tracking for hourly, shift, and variable-income workers."
+  wfPageId="699df2c3ff7815c5f95aec41"
+>
+  <Fragment slot="schema">
+    <Person />
+    <AboutPage />
+  </Fragment>
+
+  <LegacyNavbar currentPage="company" />
+
+  <!-- ABOUT PAGE — Hero -->
+  <div class="hero-section">
+    <div class="container no-padding-bottom">
+      <div style="padding-top: 80px; padding-bottom: 40px;">
+        <h1 class="secondary-page-title" style="font-size: 56px; line-height: 1.1; margin-bottom: 24px;">
+          About <span class="text-gradient-colored">NetPay UK</span>
+        </h1>
+        <p style="font-size: 22px; line-height: 1.5; max-width: 720px; opacity: 0.85;">
+          NetPay is for everyone who's ever asked: <em>"after tax and NI, what do I actually take home this month?"</em> — and never got a useful answer in time to plan their life around it.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE STORY -->
+  <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <h2 class="text-gradient-light" style="font-size: 36px; margin-bottom: 24px;">Why we built NetPay</h2>
+      <p style="font-size: 18px; line-height: 1.7; margin-bottom: 16px;">
+        Our founder Sandra Sanz built NetPay because her husband was using three separate apps to track his shifts, calculate his tax, and figure out his actual take-home pay — and was going slightly mad doing it.
+      </p>
+      <p style="font-size: 18px; line-height: 1.7; margin-bottom: 16px;">
+        Three apps for a problem that should be one app. That's how NetPay started.
+      </p>
+      <p style="font-size: 18px; line-height: 1.7;">
+        Today NetPay is used by UK shift workers, hourly staff, freelancers, and sales professionals to log hours, project earnings, and see in real time exactly how much they're going to take home — before HMRC, pension contributions, and salary sacrifice take their cut.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOUNDER SECTION -->
+  <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <h2 class="text-gradient-light" style="font-size: 36px; margin-bottom: 32px;">Built by Sandra Sanz</h2>
+      <div style="display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start;">
+        <div>
+          <img src="/images/sandra-sanz.jpg" alt="Sandra Sanz, founder of NetPay UK" loading="lazy"
+               style="width: 200px; height: 200px; border-radius: 12px; object-fit: cover; background: rgba(255,255,255,0.05);"
+               onerror="this.style.display='none'">
+        </div>
+        <div>
+          <p style="font-size: 18px; line-height: 1.7; margin-bottom: 16px;">
+            Sandra is the founder and CEO of NetPay UK. She's a product designer by training with over 8 years building fintech products — and the person who designed, coded, and shipped the entire NetPay mobile app solo using React Native, Supabase, and RevenueCat.
+          </p>
+          <p style="font-size: 18px; line-height: 1.7; margin-bottom: 16px;">
+            She knows UK PAYE, National Insurance bands, salary sacrifice mechanics, and the actual quirks of payroll (K-codes, M1/W1 emergency tax, the lot) because she had to encode all of it into the app — accurately, for real-world workers whose payslips depend on getting it right.
+          </p>
+          <p style="font-size: 18px; line-height: 1.7;">
+            NetPay UK operates under Bluka Labs, an independent UK product studio. Sandra is based in the United Kingdom.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT WE BUILD -->
+  <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <h2 class="text-gradient-light" style="font-size: 36px; margin-bottom: 24px;">What NetPay does</h2>
+      <p style="font-size: 18px; line-height: 1.7; margin-bottom: 16px;">
+        NetPay is a take-home pay tracker for variable-income workers in the UK. Log your shifts, hours, or deals — and the app calculates your real net pay using current HMRC tax rules (2024/25 tax year), including PAYE, National Insurance, pension contributions, and salary sacrifice schemes.
+      </p>
+      <p style="font-size: 18px; line-height: 1.7; margin-bottom: 24px;">
+        Available on iOS and Android. Three apps under one platform: <a href="/freelancers" style="color: #3de85d;">freelancers</a>, <a href="/sales" style="color: #3de85d;">salespeople</a>, and shift workers — each with the same core calculation engine, adapted to how that group earns.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="button w-button">Download for iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button w-button">Download for Android</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPORTANT: Disclosure section (YMYL E-E-A-T requirement) -->
+  <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="max-width: 760px; margin: 0 auto; padding: 24px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+      <h3 style="font-size: 20px; margin-bottom: 12px;">A note on financial advice</h3>
+      <p style="font-size: 15px; line-height: 1.6; opacity: 0.85; margin-bottom: 8px;">
+        NetPay calculates take-home pay based on official HMRC tax rules and the information you enter. The figures are accurate for typical UK PAYE situations — but NetPay is not a regulated financial advisor, accountant, or tax specialist.
+      </p>
+      <p style="font-size: 15px; line-height: 1.6; opacity: 0.85;">
+        For complex situations (multiple incomes, self-assessment, capital gains, or anything unusual), consult a qualified UK accountant or visit <a href="https://www.gov.uk/income-tax" target="_blank" rel="noopener noreferrer" style="color: #3de85d;">gov.uk/income-tax</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTACT CTA -->
+  <div class="container" style="padding-top: 40px; padding-bottom: 80px;">
+    <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <h2 class="text-gradient-light" style="font-size: 36px; margin-bottom: 16px;">Get in touch</h2>
+      <p style="font-size: 18px; line-height: 1.7; margin-bottom: 24px; opacity: 0.85;">
+        Press enquiries, partnership ideas, feedback, or just to say hi — we read every message.
+      </p>
+      <a href="/contact" class="button w-button">Contact NetPay</a>
+    </div>
+  </div>
+
+  <FooterLegacy currentPage="company" wfPageId="699df2c3ff7815c5f95aec41" />
+
+  <div class="preloader">
+    <div class="preloader-bg"></div><img src="/images/Sweden_1Sweden.webp" loading="lazy" alt="Sweden Logo - Webflow Template" class="preloader-logo">
+  </div>
+</BaseLayout>
