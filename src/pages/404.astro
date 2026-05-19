@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Organization from '../components/schema/Organization.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Page Not Found: NetPay"
+  description="The page you're looking for doesn't exist. Return to NetPay's homepage to find what you need."
+  noindex={true}
+>
+  <Organization slot="schema" />
+  <Navbar activePage="" />
+
+  <!-- 404 Content -->
+  <div class="hero-section">
+    <div class="container" style="text-align: center; padding: 120px 0;">
+      <div style="max-width: 600px; margin: 0 auto;">
+        <h1 style="font-size: 120px; color: rgba(255,255,255,0.1); margin-bottom: 0; font-weight: 700;">404</h1>
+        <h2 class="text-gradient-light" style="font-size: 36px; margin-bottom: 24px;">Page not found</h2>
+        <p style="color: rgba(255,255,255,0.65); font-size: 18px; line-height: 1.7; margin-bottom: 32px;">
+          The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="/" class="button button-cta w-button">Go Home</a>
+          <a href="/contact" class="button w-button">Contact Support</a>
+        </div>
+        
+        <!-- Quick links -->
+        <div style="margin-top: 48px;">
+          <p style="color: rgba(255,255,255,0.4); font-size: 14px; margin-bottom: 16px;">Popular pages:</p>
+          <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+            <a href="/" style="color: #3de85d; text-decoration: none; font-size: 14px;">Shift Workers</a>
+            <a href="/freelancers" style="color: #3de85d; text-decoration: none; font-size: 14px;">Freelancers</a>
+            <a href="/sales" style="color: #3de85d; text-decoration: none; font-size: 14px;">Sales</a>
+            <a href="/company" style="color: #3de85d; text-decoration: none; font-size: 14px;">About</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

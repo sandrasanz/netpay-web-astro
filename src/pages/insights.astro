@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Organization from '../components/schema/Organization.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Insights: NetPay"
+  description="Data insights and analysis about UK workers' pay, shifts, and earnings."
+  noindex={true}
+>
+  <Organization slot="schema" />
+  <Navbar activePage="" />
+
+  <!-- Hero -->
+  <div class="hero-section">
+    <div class="container no-padding-bottom">
+      <div class="secondary-page-holders">
+        <div class="text-hidden">
+          <div class="hero-text-1">
+            <h1 class="secondary-page-title"><span class="text-gradient-light">UK Pay Insights</span></h1>
+          </div>
+        </div>
+        <div class="small-content">
+          <p class="white-50pct">Data-driven insights about UK workers' earnings, shifts, and take-home pay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content placeholder -->
+  <div class="section">
+    <div class="container" style="text-align: center; padding: 96px 0;">
+      <div style="max-width: 500px; margin: 0 auto;">
+        <h2 style="color: #fff; margin-bottom: 24px;">Coming Soon</h2>
+        <p style="color: rgba(255,255,255,0.65); line-height: 1.7;">
+          We're working on data insights from aggregated, anonymized NetPay usage to help understand UK workers' earning patterns.
+        </p>
+        <div style="margin-top: 32px;">
+          <a href="/contact" class="button w-button">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

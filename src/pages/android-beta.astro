@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Organization from '../components/schema/Organization.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Android Beta: NetPay"
+  description="Join the Android beta for NetPay Freelancers and NetPay Sales. Get early access to upcoming features."
+>
+  <Organization slot="schema" />
+  <Navbar activePage="" />
+
+  <!-- Hero -->
+  <div class="hero-section">
+    <div class="container no-padding-bottom">
+      <div class="secondary-page-holders">
+        <div class="text-hidden">
+          <div class="hero-text-1">
+            <h1 class="secondary-page-title"><span class="text-gradient-light">Android Beta Access</span></h1>
+          </div>
+        </div>
+        <div class="small-content">
+          <p class="white-50pct">Get early access to NetPay for Freelancers and Sales on Android.</p>
+          <div style="margin-top:18px;">
+            <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button w-button">Current Android App</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="section">
+    <div class="container" style="max-width: 600px;">
+      <div style="text-align: center; padding: 48px 0;">
+        <h2 style="color: #fff; margin-bottom: 24px;">Join the Waitlist</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 32px;">
+          NetPay for Shift Workers is already available on Android. Sign up below to get early access to the upcoming Freelancers and Sales apps.
+        </p>
+        
+        <form name="android-beta" method="POST" data-netlify="true" style="max-width: 400px; margin: 0 auto;">
+          <div style="margin-bottom: 16px;">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your email address" 
+              required
+              style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; font-family: 'Archivo', sans-serif;"
+            />
+          </div>
+          <div style="margin-bottom: 24px;">
+            <select 
+              name="app" 
+              required
+              style="width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; font-family: 'Archivo', sans-serif;"
+            >
+              <option value="">Choose your app</option>
+              <option value="freelancers">NetPay for Freelancers</option>
+              <option value="sales">NetPay for Sales</option>
+              <option value="both">Both apps</option>
+            </select>
+          </div>
+          <button type="submit" class="button w-button" style="width: 100%;">
+            Join Beta Waitlist
+          </button>
+        </form>
+        
+        <p style="color: rgba(255,255,255,0.35); font-size: 12px; margin-top: 16px;">
+          We'll email you when your beta access is ready.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

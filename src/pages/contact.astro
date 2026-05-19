@@ -1,0 +1,200 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Organization from '../components/schema/Organization.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Contact & Support: NetPay"
+  description="Get help with NetPay or get in touch with the team at Bluka Labs."
+>
+  <Organization slot="schema" />
+  <Navbar activePage="contact" />
+
+  <!-- Hero -->
+  <div class="hero-section">
+    <div class="container no-padding-bottom">
+      <div class="secondary-page-holders">
+        <div class="text-hidden">
+          <div class="hero-text-1">
+            <h1 class="secondary-page-title"><span class="text-gradient-light">Support &amp; Legal</span></h1>
+          </div>
+        </div>
+        <div class="small-content">
+          <p class="white-50pct">We're a small team. We read every message and reply within 1–2 business days.</p>
+          <div style="margin-top:18px;">
+            <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button w-button">Google Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact cards -->
+  <div class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-card-icon">✉️</div>
+          <h3>Email Support</h3>
+          <p>Got a bug, a question, or feedback? Drop us a line, we'll get back to you quickly.</p>
+          <a href="mailto:info@bluka.io" class="contact-link">info@bluka.io →</a>
+          <div class="response-badge">Replies within 1–2 business days</div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">📱</div>
+          <h3>App Store Reviews</h3>
+          <p>Using the iOS app? Leave us a review on the App Store, we read every one and use your feedback to shape what we build next.</p>
+          <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="contact-link">View on App Store →</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">⚖️</div>
+          <h3>Privacy &amp; Legal</h3>
+          <p>Questions about your data, a deletion request, or how we handle UK GDPR? Use our deletion page or read our privacy policy.</p>
+          <a href="/delete-account" class="contact-link">Delete Account Request →</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">🏢</div>
+          <h3>About Bluka Labs</h3>
+          <p>NetPay is built by Bluka Labs Ltd, a UK-based software studio focused on tools for the modern workforce.</p>
+          <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="contact-link">bluka.io →</a>
+        </div>
+
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq-section">
+        <h2>Common questions</h2>
+
+        <div class="faq-item">
+          <h4>Are the tax calculations accurate?</h4>
+          <p>NetPay uses current UK HMRC Income Tax and National Insurance rates and thresholds to produce estimates. They are designed to be as accurate as possible based on the information you enter, but they are not a substitute for professional tax advice. Your actual tax liability may differ depending on other income, reliefs or allowances. Always check with HMRC or a qualified accountant for your definitive tax position.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Is my data stored on your servers?</h4>
+          <p>No. All the work hours, rates and settings you enter in the app are stored locally on your device only. We do not have access to your financial figures. If you join the waitlist or contact us, your email is stored securely. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I update my tax code?</h4>
+          <p>Go to Settings in the app and update the Tax Code field. Your tax code is shown on your payslip or can be found in your HMRC Personal Tax Account at <a href="https://www.gov.uk/check-income-tax-current-year" target="_blank" rel="noopener noreferrer">gov.uk</a>. The most common code for one job is 1257L.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>I found a bug, how do I report it?</h4>
+          <p>Email us at <a href="mailto:info@bluka.io">info@bluka.io</a> with a description of what happened, your device model, and iOS version. Screenshots help enormously. We take bugs seriously and aim to push fixes quickly.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Is there an Android app?</h4>
+          <p>Yes. <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer">NetPay UK is on Google Play</a> for shift workers and hourly pay. Upcoming Freelancers and Sales apps still have waitlists—see <a href="/android-beta">this page</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I delete my data?</h4>
+          <p>Since your data lives on your device, you can delete it by uninstalling the app. If you've given us your email address (e.g. via the waitlist), email <a href="mailto:info@bluka.io">info@bluka.io</a> with a deletion request and we'll remove it within 30 days in line with UK GDPR.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What are your Terms of Service?</h4>
+          <p>Read our full <a href="/terms">Terms of Service here</a>. The short version: NetPay is an estimation tool, not financial advice. Use it to get a clear picture of your take-home pay, but consult a professional for formal tax guidance.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 767px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 36px 32px;
+  }
+  .contact-card-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .contact-card h3 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .contact-card p {
+    color: rgba(255,255,255,0.55);
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3de85d;
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .contact-link:hover { text-decoration: underline; }
+  .faq-section {
+    max-width: 760px;
+    margin: 80px auto 96px;
+  }
+  .faq-section h2 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 24px 0;
+  }
+  .faq-item h4 {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .faq-item p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .faq-item a {
+    color: #3de85d;
+  }
+  .response-badge {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 8px;
+  }
+</style>
