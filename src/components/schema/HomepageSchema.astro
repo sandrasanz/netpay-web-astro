@@ -1,37 +1,10 @@
 ---
-// Organization + WebSite + MobileApplication schema for NetPay UK
+// WebSite + iOS MobileApplication + Android MobileApplication JSON-LD,
+// slotted into the homepage <head>. Organization is rendered site-wide by
+// BaseLayout, so it is NOT included here.
 ---
-
 <script type="application/ld+json">
 [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NetPay UK",
-    "alternateName": "NetPay",
-    "url": "https://netpayuk.com",
-    "logo": "https://netpayuk.com/images/netpay-logo.png",
-    "description": "NetPay UK helps shift workers, freelancers, and salespeople in the UK track their real take-home pay after tax, National Insurance, pension, and deductions — in real time, before payday.",
-    "founder": {
-      "@type": "Person",
-      "name": "Sandra Sanz",
-      "jobTitle": "Founder & CEO"
-    },
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Bluka Labs",
-      "url": "https://bluka.io"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    },
-    "sameAs": [
-      "https://www.instagram.com/netpayuk/",
-      "https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332",
-      "https://play.google.com/store/apps/details?id=io.bluka.uknetpay"
-    ]
-  },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",

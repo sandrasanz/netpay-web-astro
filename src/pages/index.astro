@@ -1,0 +1,611 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingNavbar from '../components/MarketingNavbar.astro';
+import FooterMarketingFull from '../components/FooterMarketingFull.astro';
+import HomepageSchema from '../components/schema/HomepageSchema.astro';
+---
+<BaseLayout
+  title="NetPay: Know What You Earn | One platform. Three apps."
+  description="NetPay helps shift workers, freelancers, and salespeople track their real take-home pay after tax. One brand, three apps, built for how you work."
+  ogTitle="NetPay: Know What You Earn"
+  ogDescription="NetPay helps shift workers, freelancers, and salespeople track their real take-home pay after tax."
+  wfPageId="699df2c3ff7815c5f95aec39"
+  faviconSet="logo"
+>
+  <HomepageSchema slot="schema" />
+
+  <style slot="head-extras">
+    .pricing-item .price-holder { margin-bottom: 24px; }
+    .hero-text { font-size: 52px !important; }
+    @media (max-width: 991px) { .hero-text { font-size: 42px !important; } }
+    @media (max-width: 767px) { .hero-text { font-size: 34px !important; } }
+    @media (max-width: 479px) { .hero-text { font-size: 28px !important; } }
+    .netpay-brand-text {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff 0%, #a0fbcd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    .stats-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 60px 0 20px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3de85d 0%, #03f6f4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+      line-height: 1.4;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .coming-soon-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(106, 84, 255, 0.2);
+      border: 1px solid rgba(106, 84, 255, 0.4);
+      color: #a89eff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .available-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(61, 232, 93, 0.15);
+      border: 1px solid rgba(61, 232, 93, 0.35);
+      color: #3de85d;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .hero-buttons-holder {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-buttons-holder .button {
+      min-width: 220px;
+      text-align: center;
+    }
+    @media (max-width: 767px) {
+      .stats-section { grid-template-columns: 1fr; gap: 32px; }
+      .stat-number { font-size: 48px; }
+    }
+    @media (max-width: 479px) {
+      .hero-buttons-holder {
+        gap: 10px;
+      }
+      .hero-buttons-holder .button {
+        width: 100%;
+        max-width: 260px;
+        min-width: 0;
+        white-space: normal;
+        line-height: 1.2;
+        padding: 12px 14px;
+      }
+    }
+  </style>
+
+  <MarketingNavbar currentPage="home" />
+
+  <div class="hero-section home-hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="flex-center-text">
+          <div class="text-hidden">
+            <div style="-webkit-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="hero-text-1">
+              <h1 class="hero-text"><span class="text-gradient-light">Know exactly what</span></h1>
+            </div>
+          </div>
+          <div class="text-hidden">
+            <div style="-webkit-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="hero-text-2">
+              <h1 class="hero-text-xl"><span class="text-gradient-colored">you take home.</span></h1>
+            </div>
+          </div>
+          <div style="opacity:0" class="hero-description">Whether you work shifts, freelance, or earn on commission, NetPay shows you your real pay after UK tax, in real time. No surprises. No maths.</div>
+          <div style="opacity:0" class="hero-buttons-holder">
+            <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="button with-icon w-button">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button w-button">Google Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="opacity:0" class="hero-circle-bg-holder"><img src="/images/CircleBg_1CircleBg.webp" loading="lazy" data-w-id="fea18232-cbba-f8ed-c4ec-e302bd26bda2" sizes="(max-width: 479px) 80vw, 70vw" alt="" srcset="/images/CircleBg_1-p-500.png 500w, /images/CircleBg_1-p-800.png 800w, /images/CircleBg_1-p-1080.png 1080w, /images/CircleBg_1CircleBg.webp 1092w" class="hero-cricle-bg"></div>
+  </div>
+  <div data-w-id="fb4bc833-1ed5-26d2-d6d8-631c2c09a611" style="opacity:0" class="animation-section">
+    <div class="hero-animation">
+      <div class="main-hero-bg-holder">
+        <div class="main-hero-bg"></div>
+      </div>
+      <div class="container animation-container">
+        <div class="anim-icons-holder">
+          <div class="anim-icons-scale-holder">
+            <div class="anim-icon-holder"><img src="/images/swatch.svg" loading="lazy" alt="" class="anim-icon"></div>
+            <div class="anim-icon-holder _2"><img src="/images/photo.svg" loading="lazy" alt="" class="anim-icon"></div>
+            <div class="anim-icon-holder _3"><img src="/images/sparkles.svg" loading="lazy" alt="" class="anim-icon"></div>
+            <div class="anim-icon-holder _4"><img src="/images/fire.svg" loading="lazy" alt="" class="anim-icon"></div>
+            <div class="anim-icon-holder _5"><img src="/images/code-bracket-square.svg" loading="lazy" alt="" class="anim-icon"></div>
+            <div class="anim-icon-holder _6"><img src="/images/folder.svg" loading="lazy" alt="" class="anim-icon"></div>
+          </div>
+        </div>
+        <div class="device-holder"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 479px) 80vw, (max-width: 767px) 92vw, (max-width: 991px) 83vw, 908.2421875px" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="NetPay App on iPhone" class="device">
+          <div class="dashboard-app-holder">
+            <div class="dashboard-app-perspective _1"><img src="/images/netpay-hero.png" loading="lazy" alt="NetPay App, Month View" class="dashboard-app"></div>
+            <div class="dashboard-app-perspective _2"><img src="/images/netpay-day-view.png" loading="lazy" alt="NetPay App, Day View" class="dashboard-app"></div>
+          </div>
+          <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" data-w-id="0188b585-01df-8cba-2869-3295ebe55f79" class="play-icon-holder w-inline-block"><img src="/images/Play.svg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="App Store" class="play-icon-image">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="section">
+    <div class="container clients-container">
+      <div class="trusted-by-container">
+        <div data-w-id="8f0fe4c7-959e-fa8c-65c0-1b1ae63ef1c6" style="opacity:0;-webkit-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="white-50pct">Why workers need NetPay</div>
+      </div>
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-number">44%</div>
+          <div class="stat-label">of UK employees have discovered errors on their payslip</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">63%</div>
+          <div class="stat-label">of hourly workers say financial stress affects their performance at work</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">£0</div>
+          <div class="stat-label">surprises, see your net pay build up, shift by shift, deal by deal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs: Three Products -->
+  <div class="section">
+    <div class="container">
+      <div class="text-container">
+        <h2><span class="text-gradient-light">Built for how ⚡️ you really work</span></h2>
+        <div class="small-content">
+          <p class="white-50pct">Every worker deserves to know their real take-home pay. NetPay is built for shift workers, freelancers, and sales professionals who get paid differently, so one size was never going to fit all.</p>
+        </div>
+      </div>
+      <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+        <div data-w-id="6b50dedb-47de-b58c-78c0-2666af58a52b" style="opacity:0" class="tabs-menu w-tab-menu">
+          <a data-w-tab="Tab 1" class="tab-link w-inline-block w-tab-link w--current">
+            <div>Shift Workers</div>
+          </a>
+          <a data-w-tab="Tab 2" class="tab-link w-inline-block w-tab-link">
+            <div>Freelancers</div>
+          </a>
+          <a data-w-tab="Tab 3" class="tab-link w-inline-block w-tab-link">
+            <div>Sales</div>
+          </a>
+        </div>
+        <div data-w-id="6b50dedb-47de-b58c-78c0-2666af58a535" style="opacity:0" class="tabs-content w-tab-content">
+          <!-- Tab 1: Shift Workers -->
+          <div data-w-tab="Tab 1" class="tab-pane w-tab-pane w--tab-active">
+            <div class="w-layout-grid tab-card-grid">
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="available-badge">Available Now</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Track shifts in seconds</span></h3>
+                <div class="card-description">Log your work hours with a single tap, direct input or start/end times. Day shifts, night shifts, and holidays all in one place.</div>
+                <div class="tab-feature-image-holder"><img src="/images/netpay-illustration-workers.svg" loading="lazy" alt="Log Hours" class="tab-feature-image" style="object-fit:contain;"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="available-badge">Available Now</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Accurate UK tax, instantly</span></h3>
+                <div class="card-description">See your net pay calculated in real time. Based on 2024–25 UK Income Tax and National Insurance rates, always accurate, never a guess.</div>
+                <div class="tab-feature-image-holder"><img src="/images/netpay-illustration-tracking.svg" loading="lazy" alt="Tax Calculations" class="tab-feature-image" style="object-fit:contain;"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="available-badge">Available Now</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Set your salary goal</span></h3>
+                <div class="card-description">Set your monthly take-home target and watch your progress update with each shift logged. Know exactly how many more hours you need.</div>
+                <div class="tab-feature-image-holder"><img src="/images/netpay-illustration-manual-worker.svg" loading="lazy" alt="Goal Tracking" class="tab-feature-image" style="object-fit:contain;"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab 2: Freelancers -->
+          <div data-w-tab="Tab 2" class="tab-pane w-tab-pane">
+            <div class="w-layout-grid tab-card-grid">
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Income tracking</span></h3>
+                <div class="card-description">Log projects and payments as you go. See your monthly and annual freelance income at a glance, across every client.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg1.svg" loading="lazy" alt="Income Tracking" class="tab-feature-image"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Self-assessment estimate</span></h3>
+                <div class="card-description">Know your tax bill before January. NetPay estimates what you'll owe HMRC, including Class 2 &amp; Class 4 NI, based on your income and expenses.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg2.svg" loading="lazy" alt="Tax Estimate" class="tab-feature-image"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Invoice generation</span></h3>
+                <div class="card-description">Create and send professional invoices in seconds. Track what's paid, pending, and overdue, with Xero &amp; QuickBooks integration.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg3.svg" loading="lazy" alt="Invoicing" class="tab-feature-image"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Tab 3: Sales -->
+          <div data-w-tab="Tab 3" class="tab-pane w-tab-pane">
+            <div class="w-layout-grid tab-card-grid">
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Live commission tracking</span></h3>
+                <div class="card-description">Log deals as you close them. Watch your commission stack up in real time, before payday. Base salary and variable commission, both tracked.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg3.svg" loading="lazy" alt="Commission Tracking" class="tab-feature-image"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Tax &amp; NI on commissions</span></h3>
+                <div class="card-description">Commission income is taxed like any other. NetPay shows your take-home after Income Tax and National Insurance, every single time.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg1.svg" loading="lazy" alt="Tax on Commission" class="tab-feature-image"></div>
+              </div>
+              <div class="card card-tab-feature">
+                <div class="card-noise-bg"></div>
+                <div class="coming-soon-badge">Coming Soon</div>
+                <h3 class="card-title no-margin-top"><span class="text-gradient-light">Pay day forecast</span></h3>
+                <div class="card-description">Predict your next payslip based on deals closed so far. Set quarterly targets and see your pipeline in potential take-home earnings.</div>
+                <div class="tab-feature-image-holder"><img src="/images/FeatureImg2.svg" loading="lazy" alt="Pay Forecast" class="tab-feature-image"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Value Proposition: 2-col content -->
+  <div class="section ligher-grey-bg" id="how-it-works">
+    <div class="container">
+      <div class="grid-card-list-holder">
+        <!-- Row 1 -->
+        <div class="w-layout-grid grid-2col">
+          <div id="w-node-_6ac17db9-046d-df26-f8e3-946360898d8e-f95aec39" class="content">
+            <div class="card-side-content">
+              <h2 class="text-gradient-light">Your payslip tells you what you earned. NetPay tells you what you actually keep.</h2>
+              <p class="white-50pct">Gross pay sounds great, until you do the maths. Income Tax, National Insurance, and variable shifts mean the number on your contract rarely matches what hits your bank. NetPay closes that gap, in real time.</p>
+              <div class="card-list-items-holder">
+                <ul role="list" class="list">
+                  <li class="list-item-with-check">Day, week &amp; month views</li>
+                  <li class="list-item-with-check">Night shift rate support</li>
+                  <li class="list-item-with-check">UK tax calculations (2024–25)</li>
+                  <li class="list-item-with-check">Salary goal tracking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="w-node-c3ac04c4-b7ad-eb39-bc2d-759465a3b05c-f95aec39" class="content">
+            <div class="sticky-content">
+              <div data-w-id="242c4aaf-e096-86cf-4bff-8c7d12019000" class="card card-no-bottom-padding">
+                <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+                  <div class="ios-app-holder"><img src="/images/netpay-hero.png" loading="lazy" alt="NetPay App, Month View" class="ios-app" style="object-fit:cover;"></div>
+                </div>
+                <div class="card-colored-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="w-layout-grid grid-2col">
+          <div id="w-node-_138b8082-1774-1f03-f73a-6e9a4928460b-f95aec39" class="content">
+            <div class="card-side-content">
+              <h2 class="text-gradient-light">Three apps. One mission. Know your take-home.</h2>
+              <p class="white-50pct">Whether you're clocking in for a night shift, sending an invoice to a client, or closing a deal before month-end, you deserve to know what lands in your account. NetPay is built for exactly that.</p>
+              <div class="card-list-items-holder">
+                <ul role="list" class="list">
+                  <li class="list-item-with-check">Shift Workers, available now on iOS</li>
+                  <li class="list-item-with-check">Freelancers, coming soon</li>
+                  <li class="list-item-with-check">Sales, coming soon</li>
+                  <li class="list-item-with-check">Free to download. No subscriptions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="w-node-_138b8082-1774-1f03-f73a-6e9a49284606-f95aec39" class="content">
+            <div class="sticky-content">
+              <div data-w-id="2337fbe3-d749-4cd1-3405-e87fe8f9ff59" class="card card-no-bottom-padding">
+                <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+                  <div class="ios-app-holder"><img src="/images/netpay-day-view.png" loading="lazy" alt="NetPay App, Day View" class="ios-app" style="object-fit:cover;"></div>
+                </div>
+                <div class="card-colored-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Apps Section (repurposed from pricing) -->
+  <div data-w-id="8525ffff-f873-120c-8c16-1e8181b0793c" class="section">
+    <div class="container">
+      <div class="text-container">
+        <h2><span class="text-gradient-light">Choose the app that fits how you work</span></h2>
+        <div class="small-content">
+          <p class="white-50pct">All NetPay apps are free to download. No subscriptions. No upsells. Just your real take-home pay.</p>
+        </div>
+      </div>
+      <div data-current="Yearly" data-easing="ease" data-duration-in="300" data-duration-out="100" class="pricing-tabs w-tabs">
+        <div class="pricing-tabs-content w-tab-content">
+          <div data-w-tab="Yearly" class="pricing-tab-pane w-tab-pane w--tab-active">
+            <div class="w-layout-grid pricing-grid">
+              <!-- Shift Workers -->
+              <div id="w-node-_1d19fdaf-3e99-0cdb-1be3-89978db62fbe-f95aec39" class="content">
+                <div class="card pricing-card">
+                  <div class="pricing-item">
+                    <div class="pricing-type">Shift Workers</div>
+                    <div class="price-holder">
+                      <div class="price"><span class="text-gradient-light">Download</span></div>
+                    </div>
+                    <ul role="list" class="list">
+                      <li class="list-item">Log shifts in seconds</li>
+                      <li class="list-item">Real-time UK tax &amp; NI</li>
+                      <li class="list-item">Night shift rate support</li>
+                      <li class="list-item">Day / week / month views</li>
+                      <li class="list-item">Salary goal tracking</li>
+                      <li class="list-item">Built-in salary calculator</li>
+                    </ul>
+                    <div class="pricing-button-holder">
+                      <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="button empty-button w-button">App Store</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Freelancers -->
+              <div id="w-node-_1d19fdaf-3e99-0cdb-1be3-89978db62fde-f95aec39" class="content">
+                <div class="card pricing-card main-pricing-card">
+                  <div class="pricing-item">
+                    <div class="pricing-type">Freelancers</div>
+                    <div class="price-holder">
+                      <div class="price"><span class="text-gradient-light">Coming</span></div>
+                      <div class="_40pct-white-text">soon</div>
+                    </div>
+                    <ul role="list" class="list">
+                      <li class="list-item">Income &amp; invoice tracking</li>
+                      <li class="list-item">Self-assessment tax estimate</li>
+                      <li class="list-item">Expense tracking</li>
+                      <li class="list-item">Invoice generation</li>
+                      <li class="list-item">Xero &amp; QuickBooks sync</li>
+                      <li class="list-item">Class 2 &amp; 4 NI calculations</li>
+                    </ul>
+                    <div class="pricing-button-holder">
+                      <a href="/android-beta?app=freelancers" class="button w-button">Join Waitlist</a>
+                    </div>
+                    <div class="card-noise-bg"></div>
+                  </div>
+                  <div class="card-colored-bg"></div>
+                </div>
+              </div>
+              <!-- Sales -->
+              <div id="w-node-_1d19fdaf-3e99-0cdb-1be3-89978db63000-f95aec39" class="content">
+                <div class="card pricing-card">
+                  <div class="pricing-item">
+                    <div class="pricing-type">Sales</div>
+                    <div class="price-holder">
+                      <div class="price"><span class="text-gradient-light">Coming</span></div>
+                      <div class="_40pct-white-text">soon</div>
+                    </div>
+                    <ul role="list" class="list">
+                      <li class="list-item">Live commission tracking</li>
+                      <li class="list-item">Tax &amp; NI on commissions</li>
+                      <li class="list-item">Monthly &amp; quarterly targets</li>
+                      <li class="list-item">Base + commission breakdown</li>
+                      <li class="list-item">Deal pipeline view</li>
+                      <li class="list-item">Pay day forecast</li>
+                    </ul>
+                    <div class="pricing-button-holder">
+                      <a href="/android-beta?app=sales" class="button with-icon w-button">Join Waitlist</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 Key Benefits -->
+  <div class="section">
+    <div class="container">
+      <div class="w-layout-grid grid-3-features">
+        <div class="content">
+          <div>
+            <div class="card-item-content"><img src="/images/aurora-icon.svg" loading="lazy" alt="" class="feature-icon">
+              <h3 class="heading-4-style">Accurate UK Tax</h3>
+              <div class="grey-dim">Based on HMRC 2024–25 rates. Income Tax and National Insurance calculated correctly every time, no estimates, no shortcuts.</div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card-item-content"><img src="/images/clock.svg" loading="lazy" alt="" class="feature-icon">
+            <h4 class="heading-4-style">Always up to date</h4>
+            <div class="grey-dim">Your net pay updates in real time as you log hours or close deals. No waiting for a payslip. No end-of-month surprises.</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card-item-content"><img src="/images/link.svg" loading="lazy" alt="" class="feature-icon">
+            <h3 class="heading-4-style">Built for every worker</h3>
+            <div class="grey-dim">Shifts, freelance projects, or sales commissions, NetPay covers every way people earn in the UK. One platform, built for real life.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section ligher-grey-bg">
+    <div class="container">
+      <div class="text-container">
+        <h2><span class="text-gradient-light">What workers say</span> ⭐️</h2>
+        <div class="small-content no-padding">
+          <p class="white-50pct">Real people. Real shifts. Real take-home pay. Here's what NetPay users think.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-container">
+      <div data-delay="6000" data-animation="slide" class="slider w-slider" data-autoplay="true" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="300" data-infinite="true">
+        <div class="slider-mask w-slider-mask">
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle">
+                    <div class="feedback-image-holder"><img src="/images/memoji-6_1memoji-6.webp" loading="lazy" sizes="86px" srcset="/images/memoji-6_1-p-500.png 500w, /images/memoji-6_1memoji-6.webp 759w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">Finally I know exactly what I'm taking home each week. No more waiting for my payslip to find out I got taxed more than expected.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Jamie T.</p>
+                    <div class="feedback-position">Warehouse Operative</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle feedback-color-green">
+                    <div class="feedback-image-holder"><img src="/images/memoji-3_1memoji-3.webp" loading="lazy" sizes="86px" srcset="/images/memoji-3_1-p-500.png 500w, /images/memoji-3_1memoji-3.webp 768w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">The night shift rate support is perfect. I get paid more for nights and the app handles the different rates automatically. Brilliant.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Sarah L.</p>
+                    <div class="feedback-position">NHS Healthcare Worker</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle feedback-color-violet">
+                    <div class="feedback-image-holder"><img src="/images/memoji-5_1memoji-5.webp" loading="lazy" sizes="86px" srcset="/images/memoji-5_1-p-500.png 500w, /images/memoji-5_1memoji-5.webp 768w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">I set my monthly take-home target and could see day by day how close I was. It actually changed how I thought about picking up extra shifts.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Marcus C.</p>
+                    <div class="feedback-position">Security Officer</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle feedback-color-yellow">
+                    <div class="feedback-image-holder"><img src="/images/memoji-7_1memoji-7.webp" loading="lazy" sizes="86px" srcset="/images/memoji-7_1-p-500.png 500w, /images/memoji-7_1memoji-7.webp 768w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">I used to be surprised every payday. With NetPay I know exactly what to expect. No surprises, no maths. Just my real take-home.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Priya M.</p>
+                    <div class="feedback-position">Supermarket Supervisor</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle feedback-color-rose">
+                    <div class="feedback-image-holder"><img src="/images/memoji-1_1memoji-1.webp" loading="lazy" sizes="86px" srcset="/images/memoji-1_1-p-500.png 500w, /images/memoji-1_1memoji-1.webp 768w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">Super simple to use. Log my shifts and instantly see my net pay. It's the kind of app I didn't know I needed until I had it.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Tom B.</p>
+                    <div class="feedback-position">Delivery Driver</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide w-slide">
+            <div class="feedback-card-container">
+              <div class="card feedback-card">
+                <div class="feedback-item-content">
+                  <div class="feedback-image-circle">
+                    <div class="feedback-image-holder"><img src="/images/memoji-2_1memoji-2.webp" loading="lazy" sizes="86px" srcset="/images/memoji-2_1-p-500.png 500w, /images/memoji-2_1memoji-2.webp 768w" alt="Memoji" class="feedback-image"></div>
+                  </div>
+                  <div class="feedback-text">As someone who works variable hours each week, this app is exactly what I needed. Clear, accurate, and no faff. Highly recommended.</div>
+                  <div class="feedback-name-and-position">
+                    <p class="feedback-author">Olivia R.</p>
+                    <div class="feedback-position">Hospitality Worker</div>
+                  </div>
+                </div>
+                <div class="card-noise-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-left-arrow w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="slider-right-arrow w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="slider-nav w-slider-nav w-round"></div>
+      </div>
+    </div>
+  </div>
+
+  <FooterMarketingFull currentPage="home" />
+
+  <div class="preloader">
+    <div class="preloader-bg"></div>
+    <img src="/images/netpaylogo.svg" alt="NetPay" style="height:36px;display:block;">
+  </div>
+</BaseLayout>
