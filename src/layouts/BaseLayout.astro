@@ -8,6 +8,7 @@ export interface Props {
   ogUrl?: string;
   noindex?: boolean;
   wfPageId: string;
+  faviconSet?: 'logo' | 'legacy';
 }
 
 const {
@@ -19,10 +20,14 @@ const {
   ogUrl,
   noindex = false,
   wfPageId,
+  faviconSet = 'legacy',
 } = Astro.props;
 
 const fullCanonical = canonical || new URL(Astro.url.pathname, Astro.site!).toString();
 const fullOgUrl = ogUrl || fullCanonical;
+
+const favicon = faviconSet === 'logo' ? '/images/netpay-logo.png' : '/images/favicon.png';
+const appleTouchIcon = faviconSet === 'logo' ? '/images/netpay-logo.png' : '/images/webclip.png';
 ---
 <!DOCTYPE html>
 <html data-wf-page={wfPageId} data-wf-site="699df2c2ff7815c5f95aebc6" lang="en">
@@ -91,8 +96,8 @@ const fullOgUrl = ogUrl || fullCanonical;
   <!-- Webflow touch detection -->
   <script is:inline>!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
 
-  <link rel="shortcut icon" href="/images/netpay-logo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" href="/images/netpay-logo.png">
+  <link rel="shortcut icon" href={favicon} type="image/x-icon">
+  <link rel="apple-touch-icon" href={appleTouchIcon}>
 
   <!-- Universal antialiasing (present on every production page) -->
   <style is:global>
