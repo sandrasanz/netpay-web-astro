@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingNavbar from '../components/MarketingNavbar.astro';
+import FooterMarketingFull from '../components/FooterMarketingFull.astro';
+import FreelancersPage from '../components/FreelancersPage.astro';
+---
+<BaseLayout
+  title="NetPay for Freelancers: Know Your Take-Home"
+  description="Track your freelance income, estimate your self-assessment tax, and generate invoices: all in one place. Join the waitlist."
+  ogDescription="Track your freelance income, estimate your self-assessment tax, and generate invoices: all in one place."
+  wfPageId="699df2c3ff7815c5f95aec45"
+  faviconSet="logo"
+>
+  <MarketingNavbar currentPage="freelancers" />
+
+  <FreelancersPage />
+
+  <FooterMarketingFull currentPage="freelancers" subscribeFormSuffix="fl" androidVariant="freelancers" />
+
+  <div class="preloader">
+    <div class="preloader-bg"></div>
+    <img src="/images/netpaylogo.svg" alt="NetPay" style="height:36px;display:block;">
+  </div>
+</BaseLayout>

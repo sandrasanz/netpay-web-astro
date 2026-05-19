@@ -31,5 +31,5 @@ These pages use the older Webflow template's nav + footer that Sandra never full
 
 ## Possible technical follow-ups
 
-- The freelancers page is structurally a clone of features with `href` rewrites. Long-term, decide if it should be its own canonical content (separate URL, separate SEO target) or just a `301 /freelancers → /features` redirect.
+- **/features and /freelancers serve identical content** (both wrap `FreelancersPage.astro`). Their `og:url` and `<link rel="canonical">` are auto-generated from the path, so each currently self-canonicals — duplicate-content risk in Google. Decide one of: (a) set `canonical="/freelancers/"` on features.astro so /features defers SEO weight to /freelancers; (b) Netlify `301 /features → /freelancers`; (c) write separately-positioned content for /features (real "features" page distinct from freelancers).
 - Astro CSS scoping (`data-astro-cid-*`) doesn't appear on `<html>` / `<body>` thanks to `is:global`, but page-specific inline styles via `head-extras` slot will still be scoped unless each page also uses `is:global`. Decide the per-page convention before Phase 3 ports.
