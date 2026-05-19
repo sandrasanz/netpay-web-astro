@@ -1,0 +1,179 @@
+---
+export interface Props {
+  currentPage?: 'company' | 'insights';
+  wfPageId: string;
+}
+const { currentPage, wfPageId } = Astro.props;
+
+const companyCurrent = currentPage === 'company';
+const insightsCurrent = currentPage === 'insights';
+---
+<div class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div id="w-node-_74ab3314-1e2b-a768-0bb3-b25894c1a502-0a144c54" class="content">
+        <div class="fade-in-move-on-scroll">
+          <div class="footer-brand-content">
+            <a href="/" class="footer-logo-link"><img src="/images/Sweden_1Sweden.webp" sizes="120px" srcset="/images/Sweden_1-p-500.png 500w, /images/Sweden_1-p-800.png 800w, /images/Sweden_1Sweden.webp 1098w" alt="Sweden Logo - Webflow Template" class="footer-image"></a>
+            <div class="footer-description">Where imagination meets innovation - unleash your creativity with us!</div>
+            <div class="social-media-icons">
+              <a href="mailto:info@bluka.io" class="social-media-link w-inline-block">
+                <img src="/images/instagram.svg" loading="lazy" alt="Email" class="social-media-icon">
+                <div class="link-background"></div>
+              </a>
+              <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="social-media-link w-inline-block">
+                <img src="/images/linkedin.svg" loading="lazy" alt="Bluka Labs" class="social-media-icon">
+                <div class="link-background"></div>
+              </a>
+            </div>
+            <div class="subscribe-form-holder w-form">
+              <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" method="get" class="subscribe-form" data-wf-page-id={wfPageId} data-wf-element-id="94ad1a15-a764-a1ee-f194-0bd3f8dcd9cf"><input class="subscribe-email w-input" maxlength="256" name="Subscribe-Form-Email-2" data-name="Subscribe Form Email 2" placeholder="Email" type="text" id="Subscribe-Form-Email-2" required /><input type="submit" data-wait="..." class="subscribe-button w-button" value="Subscribe" /></form>
+              <div class="success-message w-form-done">
+                <div>Thank you! We got you!</div>
+              </div>
+              <div class="error-message w-form-fail">
+                <div>Oops! Something went wrong. Try again!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Product</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/" class="footer-link w-inline-block">
+            <div>The-Platform</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <div class="footer-link-new-holder">
+            <a href="/sales" class="footer-link w-inline-block">
+              <div>Pricing</div>
+              <div class="link-block-underline"></div>
+            </a>
+            <div class="new-badge">new</div>
+          </div>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/features" class="footer-link w-inline-block">
+            <div>Features</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/insights" {...(insightsCurrent ? { 'aria-current': 'page' } : {})} class={`footer-link w-inline-block${insightsCurrent ? ' w--current' : ''}`}>
+            <div>Insights</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="footer-grid-content second">
+          <div class="footer-heading">Download</div>
+          <div class="fade-in-move-on-scroll">
+            <a href="/sales" class="footer-link w-inline-block">
+              <div>iOS App</div>
+              <div class="link-block-underline"></div>
+            </a>
+          </div>
+          <div class="fade-in-move-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="footer-link w-inline-block">
+              <div>Android App</div>
+              <div class="link-block-underline"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Company</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/company" {...(companyCurrent ? { 'aria-current': 'page' } : {})} class={`footer-link w-inline-block${companyCurrent ? ' w--current' : ''}`}>
+            <div>About us</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/company#careers" class="footer-link w-inline-block">
+            <div>Careers</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/privacy" class="footer-link w-inline-block">
+            <div>Privacy</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/contact" class="footer-link w-inline-block">
+            <div>Contact</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="footer-grid-content second">
+          <div class="footer-heading">Help</div>
+          <div class="fade-in-move-on-scroll">
+            <a href="/contact" class="footer-link w-inline-block">
+              <div>Help &amp; Support</div>
+              <div class="link-block-underline"></div>
+            </a>
+          </div>
+          <div class="fade-in-move-on-scroll">
+            <a href="mailto:info@bluka.io" class="footer-link w-inline-block">
+              <div>Email Us</div>
+              <div class="link-block-underline"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Template</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/template/style-guide" class="footer-link w-inline-block">
+            <div>Style Guide</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/template/licensing" class="footer-link w-inline-block">
+            <div>Licencing</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/template/change-log" class="footer-link w-inline-block">
+            <div>Change Log</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/template/instructions" class="footer-link w-inline-block">
+            <div>Instructions</div>
+            <div class="link-block-underline"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="eb050d0c-cd20-6fbc-5d31-0eaf0a144c87" class="made-by-section">
+      <div class="copyright-text">© 2026 <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="copyright-link">Bluka Labs</a>. All rights reserved.</div>
+      <div class="copyright-text">Built with ❤️ for UK workers</div>
+    </div>
+  </div>
+  <div class="footer-gradient-bg-holder">
+    <div class="footer-gradient-background"></div><img src="/images/CircleBg_1CircleBg.webp" loading="lazy" data-w-id="c69740f0-85fd-3be9-0eb9-3cdc217038eb" sizes="100vw" alt="" srcset="/images/CircleBg_1-p-500.png 500w, /images/CircleBg_1-p-800.png 800w, /images/CircleBg_1-p-1080.png 1080w, /images/CircleBg_1CircleBg.webp 1092w" class="footer-cricle-bg">
+  </div>
+  <div class="footer-name-infinit">
+    <div class="footer-name-holder">
+      <div class="footer-name _1">download</div>
+      <div class="footer-name _2">download</div>
+      <div class="footer-name _3">download</div>
+    </div>
+    <div class="footer-download-buttons">
+      <a href="https://www.apple.com/store" target="_blank" class="button download-button w-inline-block">
+        <div>iOS</div><img src="/images/download.svg" loading="lazy" alt="" class="download-icon">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button download-button w-inline-block">
+        <div>Android</div><img src="/images/download.svg" loading="lazy" alt="" class="download-icon">
+      </a>
+    </div>
+  </div>
+</div>

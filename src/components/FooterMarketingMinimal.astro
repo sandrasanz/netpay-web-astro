@@ -1,0 +1,102 @@
+---
+export interface Props {
+  currentPage?: 'contact' | 'privacy' | 'terms';
+  supportSecondLink?: 'email' | 'delete-account';
+}
+const { currentPage, supportSecondLink = 'email' } = Astro.props;
+
+const contactCurrent = currentPage === 'contact';
+const privacyCurrent = currentPage === 'privacy';
+const termsCurrent = currentPage === 'terms';
+---
+<div class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="content">
+        <div class="fade-in-move-on-scroll">
+          <div class="footer-brand-content">
+            <a href="/" class="footer-logo-link">
+              <img src="/images/netpaylogo.svg" alt="NetPay" style="height:28px;display:block;">
+            </a>
+            <div class="footer-description">Know exactly what you take home, shift by shift, project by project, deal by deal.</div>
+            <div class="social-media-icons">
+              <a href="mailto:info@bluka.io" class="social-media-link w-inline-block">
+                <img src="/images/instagram.svg" loading="lazy" alt="Email" class="social-media-icon">
+                <div class="link-background"></div>
+              </a>
+              <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="social-media-link w-inline-block">
+                <img src="/images/linkedin.svg" loading="lazy" alt="Bluka Labs" class="social-media-icon">
+                <div class="link-background"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Apps</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/" class="footer-link w-inline-block"><div>Shift Workers</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/freelancers" class="footer-link w-inline-block"><div>Freelancers</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/sales" class="footer-link w-inline-block"><div>Sales</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="footer-grid-content second">
+          <div class="footer-heading">Download</div>
+          <div class="fade-in-move-on-scroll">
+            <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="footer-link w-inline-block"><div>iOS App</div><div class="link-block-underline"></div></a>
+          </div>
+          <div class="fade-in-move-on-scroll">
+            <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="footer-link w-inline-block"><div>Android App</div><div class="link-block-underline"></div></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Company</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/contact" class={`footer-link w-inline-block${contactCurrent ? ' w--current' : ''}`}><div>Contact Us</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/privacy" class={`footer-link w-inline-block${privacyCurrent ? ' w--current' : ''}`}><div>Privacy Policy</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="/terms" class={`footer-link w-inline-block${termsCurrent ? ' w--current' : ''}`}><div>Terms of Service</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="footer-grid-content second">
+          <div class="footer-heading">Support</div>
+          <div class="fade-in-move-on-scroll">
+            <a href="/contact" class={`footer-link w-inline-block${contactCurrent ? ' w--current' : ''}`}><div>Help &amp; Support</div><div class="link-block-underline"></div></a>
+          </div>
+          <div class="fade-in-move-on-scroll">
+            {supportSecondLink === 'delete-account' ? (
+              <a href="/delete-account" class="footer-link w-inline-block"><div>Delete Account</div><div class="link-block-underline"></div></a>
+            ) : (
+              <a href="mailto:info@bluka.io" class="footer-link w-inline-block"><div>Email Us</div><div class="link-block-underline"></div></a>
+            )}
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid-content">
+        <div class="footer-heading">Powered by</div>
+        <div class="fade-in-move-on-scroll">
+          <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="footer-link w-inline-block"><div>Bluka Labs</div><div class="link-block-underline"></div></a>
+        </div>
+        <div class="fade-in-move-on-scroll">
+          <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="footer-link w-inline-block"><div>App Store Listing</div><div class="link-block-underline"></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="made-by-section">
+      <div class="copyright-text">© 2026 <a href="https://bluka.io" target="_blank" rel="noopener noreferrer" class="copyright-link">Bluka Labs</a>. All rights reserved.</div>
+      <div class="copyright-text">Built with ❤️ for UK workers</div>
+    </div>
+  </div>
+  <div class="footer-gradient-bg-holder">
+    <div class="footer-gradient-background"></div><img src="/images/CircleBg_1CircleBg.webp" loading="lazy" sizes="100vw" alt="" srcset="/images/CircleBg_1-p-500.png 500w, /images/CircleBg_1-p-800.png 800w, /images/CircleBg_1-p-1080.png 1080w, /images/CircleBg_1CircleBg.webp 1092w" class="footer-cricle-bg">
+  </div>
+  <div class="w-embed">
+    <style is:global> .main-hero-bg-holder, .main-hero-bg { pointer-events: none; } </style>
+  </div>
+</div>

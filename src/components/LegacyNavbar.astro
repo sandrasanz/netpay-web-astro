@@ -1,0 +1,60 @@
+---
+export interface Props {
+  currentPage?: 'home' | 'sales' | 'features' | 'company' | 'insights' | 'contact';
+}
+const { currentPage } = Astro.props;
+
+type Page = NonNullable<Props['currentPage']>;
+const isCurrent = (p: Page) => currentPage === p;
+---
+<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="500" data-doc-height="1">
+  <div class="container nav-container">
+    <div class="nav-menu-container">
+      <a href="/" class="brand-link w-nav-brand"><img src="/images/Sweden_1Sweden.webp" loading="lazy" sizes="150px" srcset="/images/Sweden_1-p-500.png 500w, /images/Sweden_1-p-800.png 800w, /images/Sweden_1Sweden.webp 1098w" alt="Sweden Logo - Webflow Template" class="brand-logo"></a>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <div class="nav-menu-list-items">
+          <div class="nav-link-holder">
+            <a href="/" {...(isCurrent('home') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('home') ? ' w--current' : ''}`}>
+              <div>Product</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+          <div class="nav-link-holder">
+            <a href="/sales" {...(isCurrent('sales') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('sales') ? ' w--current' : ''}`}>
+              <div>Pricing</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+          <div class="nav-link-holder">
+            <a href="/features" {...(isCurrent('features') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('features') ? ' w--current' : ''}`}>
+              <div>Features</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+          <div class="nav-link-holder">
+            <a href="/company" {...(isCurrent('company') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('company') ? ' w--current' : ''}`}>
+              <div>Company</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+          <div class="nav-link-holder">
+            <a href="/insights" {...(isCurrent('insights') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('insights') ? ' w--current' : ''}`}>
+              <div>Insights</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-last-button-holder">
+          <div class="nav-link-holder">
+            <a href="/contact" {...(isCurrent('contact') ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${isCurrent('contact') ? ' w--current' : ''}`}>
+              <div class="nav-text-gradient">Talk to sales</div>
+              <div class="link-background white-link-bg"></div>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div class="menu-button w-nav-button"><img src="/images/menu-icon.svg" loading="lazy" alt="" class="menu-icon"></div>
+    </div>
+  </div>
+  <div class="nav-line"></div>
+</div>
