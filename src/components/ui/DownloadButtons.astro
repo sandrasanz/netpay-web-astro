@@ -1,0 +1,39 @@
+---
+// Reusable download buttons for App Store and Play Store
+export interface Props {
+  layout?: 'horizontal' | 'vertical';
+  size?: 'small' | 'normal';
+}
+
+const { layout = 'horizontal', size = 'normal' } = Astro.props;
+---
+
+<div class={`download-buttons-container ${layout} ${size}`}>
+  <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="button download-button w-inline-block">
+    <div>iOS</div>
+    <img src="/images/download.svg" loading="lazy" alt="" class="download-icon">
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button download-button w-inline-block">
+    <div>Android</div>
+    <img src="/images/download.svg" loading="lazy" alt="" class="download-icon">
+  </a>
+</div>
+
+<style>
+  .download-buttons-container.horizontal {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .download-buttons-container.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .download-buttons-container.small .download-button {
+    transform: scale(0.8);
+  }
+</style>

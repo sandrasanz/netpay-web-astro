@@ -1,17 +1,23 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Organization from '../components/schema/Organization.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="NetPay: Know What You Earn | One platform. Three apps."
+  description="NetPay helps shift workers, freelancers, and salespeople track their real take-home pay after tax. One brand, three apps, built for how you work."
+>
+  <Organization slot="schema" />
+  <Navbar activePage="home" />
+  
+  <!-- Test content to verify BaseLayout works -->
+  <div style="padding: 2rem; text-align: center;">
+    <h1>🎉 BaseLayout Test Page</h1>
+    <p>If you can see this with the NetPay navbar above and footer below, BaseLayout is working!</p>
+    <p>This will be replaced with the actual homepage content in Phase 3.</p>
+  </div>
+
+  <Footer />
+</BaseLayout>
