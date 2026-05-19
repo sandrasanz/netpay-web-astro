@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingNavbar from '../components/MarketingNavbar.astro';
+import FooterMarketingMinimal from '../components/FooterMarketingMinimal.astro';
+---
+<BaseLayout
+  title="Delete Account: NetPay"
+  description="Request deletion of your NetPay account data. Submit your email and we will process your request within 2-3 business days."
+  ogDescription="Request deletion of your NetPay account data from NetPay."
+  wfPageId="699df2c3ff7815c5f95aec99"
+>
+  <style slot="head-extras">
+    .delete-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+      align-items: start;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 0 96px;
+    }
+    .delete-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .delete-card h2 {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 0 14px;
+    }
+    .delete-card p {
+      margin: 0 0 16px;
+      color: rgba(255,255,255,0.62);
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .timeline-pill {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(61,232,93,0.35);
+      background: rgba(61,232,93,0.12);
+      color: #3de85d;
+      font-family: 'Archivo', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+    .steps-list li {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .steps-list li strong { color: #fff; }
+    .delete-form-holder {
+      background: rgba(11,14,20,0.5);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .delete-form-label {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.9);
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .delete-input, .delete-textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.03);
+      color: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .delete-input:focus, .delete-textarea:focus {
+      border-color: rgba(61,232,93,0.6);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(61,232,93,0.12);
+    }
+    .delete-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .delete-button {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #3de85d 0%, #03f6f4 100%);
+      color: #06131b;
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 16px;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+    .delete-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(3,246,244,0.18);
+    }
+    .delete-help {
+      margin-top: 12px;
+      color: rgba(255,255,255,0.5);
+      font-family: 'Archivo', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .delete-help a {
+      color: #3de85d;
+      text-decoration: none;
+    }
+    .success-notice {
+      display: none;
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(61,232,93,0.35);
+      background: rgba(61,232,93,0.12);
+      color: #bffcc8;
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .hidden-field { display: none; }
+    @media (max-width: 991px) {
+      .delete-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <MarketingNavbar />
+
+  <div class="hero-section">
+    <div class="container no-padding-bottom">
+      <div class="secondary-page-holders">
+        <div class="text-hidden">
+          <div class="hero-text-1">
+            <h1 class="secondary-page-title"><span class="text-gradient-light">Delete Account Request</span></h1>
+          </div>
+        </div>
+        <div class="small-content">
+          <p class="white-50pct">Use this page to request deletion of your account-related personal data for NetPay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="delete-layout">
+        <div class="delete-card">
+          <div class="timeline-pill">Processing time: 2-3 business days</div>
+          <h2>How account deletion works</h2>
+          <p>Submit the email address associated with your NetPay account or support profile. We will verify your request, process deletion, and send a confirmation email when complete.</p>
+          <p>As an alternative, you can delete your account in the app instantly.</p>
+          <p>When we process your request, account-linked personal data is deleted from our active systems, except data we must retain for legal, fraud-prevention, or tax/compliance obligations.</p>
+          <ul class="steps-list">
+            <li><strong>Step 1:</strong> Enter your email address in the form.</li>
+            <li><strong>Step 2:</strong> Our team validates the request and starts deletion.</li>
+            <li><strong>Step 3:</strong> Within 2-3 business days, we email you a deletion confirmation.</li>
+          </ul>
+        </div>
+
+        <div class="delete-form-holder">
+          <div id="success-notice" class="success-notice">Your request was sent successfully. We will process it within 2-3 business days and send confirmation by email.</div>
+          <form name="account-deletion-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/delete-account?success=1">
+            <input type="hidden" name="form-name" value="account-deletion-request">
+            <p class="hidden-field">
+              <label>Do not fill this out if you are human: <input name="bot-field"></label>
+            </p>
+
+            <label for="deletion-email" class="delete-form-label">Email address</label>
+            <input id="deletion-email" class="delete-input" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+            <label for="deletion-notes" class="delete-form-label">Notes (optional)</label>
+            <textarea id="deletion-notes" class="delete-textarea" name="notes" placeholder="Any extra details that help us identify your account."></textarea>
+
+            <button type="submit" class="delete-button">Delete my account</button>
+          </form>
+          <p class="delete-help">If the form is unavailable, email <a href="mailto:info@bluka.io?subject=Account%20Deletion%20Request">info@bluka.io</a> with subject "Account Deletion Request".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <FooterMarketingMinimal supportSecondLink="delete-account" />
+
+  <div class="preloader">
+    <div class="preloader-bg"></div>
+    <img src="/images/netpaylogo.svg" alt="NetPay" style="height:36px;display:block;">
+  </div>
+
+  <script is:inline>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "1") {
+      var successNotice = document.getElementById("success-notice");
+      if (successNotice) {
+        successNotice.style.display = "block";
+      }
+    }
+  })();
+  </script>
+</BaseLayout>
