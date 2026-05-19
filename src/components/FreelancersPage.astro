@@ -1,0 +1,342 @@
+---
+// Shared body markup for features.astro and freelancers.astro.
+// In production, features.html IS the freelancers page (titled "NetPay for
+// Freelancers"). freelancers.html is a runtime JS proxy that fetches and
+// rewrites features.html. The Astro migration replaces that proxy by having
+// both routes render identical content statically. See memory:
+// project-freelancers-proxy.
+---
+<style is:global>
+  .netpay-brand-text {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff 0%, #a0fbcd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+  }
+  .coming-soon-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: rgba(106, 84, 255, 0.2);
+    border: 1px solid rgba(106, 84, 255, 0.4);
+    color: #a89eff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .hero-waitlist-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .hero-waitlist-form input[type="email"] {
+    flex: 1;
+    min-width: 220px;
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    font-family: 'Archivo', sans-serif;
+  }
+  .hero-waitlist-form input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
+  .hero-waitlist-form button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3de85d 0%, #03f6f4 100%);
+    color: #0f0f11;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Archivo', sans-serif;
+    white-space: nowrap;
+  }
+  .hero-waitlist-form button:disabled { opacity: 0.7; cursor: default; }
+  .waitlist-note { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 8px; }
+</style>
+
+<!-- Hero -->
+<div data-w-id="af76c436-029f-9383-fd05-b7b4a0b8bbf8" class="hero-section">
+  <div class="container no-padding-bottom">
+    <div class="secondary-page-holders">
+      <div class="text-hidden">
+        <div style="-webkit-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="hero-text-1">
+          <span class="coming-soon-badge">Coming Soon</span>
+          <h1 class="secondary-page-title"><span class="text-gradient-light">Know your take-home.</span><br><span class="text-gradient-colored">Even when your income isn't.</span></h1>
+        </div>
+      </div>
+      <div style="opacity:0" class="hero-description">Freelancing means variable income, unpredictable tax bills, and invoices to chase. NetPay for Freelancers tracks what you earn, estimates what HMRC will want, and helps you stay on top of it all.</div>
+      <div class="hero-buttons-holder" style="justify-content:center;">
+        <a href="/android-beta?app=freelancers" class="button w-button">Join the waitlist</a>
+      </div>
+    </div>
+    <div class="secondary-hero-image-holder no-bottom-padding">
+      <div class="secondary-hero-gradient"></div>
+      <div data-w-id="21e64914-b34a-5588-9a1e-ba53b2254b45" class="secondary-image-holder">
+        <div class="features-hero-holder _1">
+          <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+            <div class="ios-app-holder"><img src="/images/netpay-hero.png" loading="lazy" alt="NetPay freelancer income view" class="ios-app" style="object-fit:cover;"></div>
+          </div>
+        </div>
+        <div class="features-hero-holder _2">
+          <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+            <div class="ios-app-holder"><img src="/images/netpay-day-view.png" loading="lazy" alt="NetPay day view" class="ios-app" style="object-fit:cover;"></div>
+          </div>
+        </div>
+        <div class="features-hero-holder _3">
+          <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+            <div class="ios-app-holder"><img src="/images/netpay-log-hours.png" loading="lazy" alt="NetPay log hours" class="ios-app" style="object-fit:cover;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="features-image-gradient"></div>
+</div>
+
+<!-- Phone grid + 3-feature card -->
+<div>
+  <div class="section ligher-grey-bg zindex-3">
+    <div class="container">
+      <div class="text-container left-align">
+        <h2><span class="text-gradient-light">Everything a freelancer needs<br>to stay in control</span></h2>
+        <div class="small-content no-auto-margin">
+          <p class="white-50pct">Variable income, quarterly tax bills, client invoices, NetPay for Freelancers gives you a single clear picture of what you earn and what you actually keep after UK tax.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-noise-bg"></div>
+        <div data-w-id="2887d40a-6c44-0ad6-b0bc-c5dd61455595" class="featured-card-image-holder">
+          <div class="features-side-phones-holder">
+            <div class="features-side-phones-rotated">
+              <div id="w-node-b87f8b51-7dee-4c91-00bc-6fa50adcc680-f95aec45" class="features-side-phones-left">
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-hero.png" loading="eager" alt="NetPay income view" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-day-view.png" loading="eager" alt="NetPay day view" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-log-hours.png" loading="eager" alt="NetPay log" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="w-node-e9b48c7b-f989-3cbc-4d9b-d048830248dc-f95aec45" class="features-side-phones-mid">
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-settings.png" loading="eager" alt="NetPay settings" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-hero.png" loading="eager" alt="NetPay month view" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-day-view.png" loading="eager" alt="NetPay day view" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="w-node-a3d26b41-9583-f6ff-9baf-9f78c7ceaac7-f95aec45" class="features-side-phones-right">
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-log-hours.png" loading="eager" alt="NetPay log hours" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-settings.png" loading="eager" alt="NetPay settings" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+                <div class="phone-grid-item">
+                  <div class="card-image-iphone"><img src="/images/iPhone14Pro.png" loading="lazy" sizes="(max-width: 767px) 64vw, (max-width: 991px) 65vw, (max-width: 1279px) 62vw, (max-width: 1439px) 769.15966796875px, 61vw" srcset="/images/iPhone14Pro-p-500.png 500w, /images/iPhone14Pro-p-800.png 800w, /images/iPhone14Pro-p-1080.png 1080w, /images/iPhone14Pro.png 1306w" alt="iPhone" class="side-iphone">
+                    <div class="ios-side-app-holder"><img src="/images/netpay-hero.png" loading="eager" alt="NetPay" class="ios-app" style="object-fit:cover;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="features-card-image-border"></div>
+        </div>
+        <div class="w-layout-grid grid-3-features">
+          <div class="content">
+            <div>
+              <div class="card-item-content">
+                <div class="features-card-heading"><span class="text-gradient-light">Income Tracking</span></div>
+                <div class="grey-dim">Log projects and payments as you go. See your monthly and annual earnings at a glance, no spreadsheets needed.</div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="card-item-content">
+              <div class="features-card-heading"><span class="text-gradient-light">Self-Assessment Estimate</span></div>
+              <div class="grey-dim">Know your tax bill before January. NetPay estimates what you'll owe HMRC based on your income and expenses.</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="card-item-content">
+              <div class="features-card-heading"><span class="text-gradient-light">Invoice Generation</span></div>
+              <div class="grey-dim">Create and send professional invoices in seconds. Track what's paid, pending, and overdue from one screen.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2-col: Tax position -->
+  <div class="section">
+    <div class="container">
+      <div class="grid-card-list-holder">
+        <div class="w-layout-grid grid-2col">
+          <div id="w-node-c3ac04c4-b7ad-eb39-bc2d-759465a3b05c-f95aec45" class="content">
+            <div class="sticky-content">
+              <div data-w-id="242c4aaf-e096-86cf-4bff-8c7d12019000" class="card card-no-bottom-padding">
+                <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+                  <div class="ios-app-holder"><img src="/images/netpay-hero.png" loading="lazy" alt="NetPay income view" class="ios-app" style="object-fit:cover;"></div>
+                </div>
+                <div class="card-colored-bg-2"></div>
+              </div>
+            </div>
+          </div>
+          <div id="w-node-_6ac17db9-046d-df26-f8e3-946360898d8e-f95aec45" class="content">
+            <div class="card-side-content">
+              <h3 class="text-gradient-light">Always know your tax position</h3>
+              <div class="card-side-content-items">
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">NI &amp; Income Tax</div>
+                  <p class="white-50pct">Class 2 and Class 4 National Insurance, plus Income Tax, calculated automatically as you earn. No more end-of-year panic.</p>
+                </div>
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">Self-Assessment Estimate</div>
+                  <p class="white-50pct">Know your tax bill before January. NetPay estimates what you'll owe HMRC based on your income and allowable expenses.</p>
+                </div>
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">Expense Tracking</div>
+                  <p class="white-50pct">Log business expenses to reduce your tax bill. Every receipt logged is tax you don't overpay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-layout-grid grid-2col">
+          <div id="w-node-_138b8082-1774-1f03-f73a-6e9a4928460b-f95aec45" class="content">
+            <div class="card-side-content">
+              <h3 class="text-gradient-light">Connect with your accountant's tools</h3>
+              <div class="card-side-content-items">
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">Xero &amp; QuickBooks</div>
+                  <p class="white-50pct">Sync with the tools your accountant already uses. No double entry, no manual exports, your numbers flow automatically.</p>
+                </div>
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">Invoice Generation</div>
+                  <p class="white-50pct">Create and send professional invoices in seconds. Track what's paid, pending, and overdue from one place.</p>
+                </div>
+                <div class="card-side-content-item">
+                  <div class="features-card-sx-heading">Real Take-Home View</div>
+                  <p class="white-50pct">See your actual net income after all deductions, not just your gross. Know what lands in your bank before it does.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="w-node-_138b8082-1774-1f03-f73a-6e9a49284606-f95aec45" class="content">
+            <div class="sticky-content">
+              <div data-w-id="24e69763-3840-3796-5950-3305accb647e" class="card card-no-bottom-padding">
+                <div class="card-image-iphone"><img src="/images/Apple-iPhone-12-Pro-Silver-1.svg" loading="lazy" alt="iPhone" class="iphone">
+                  <div class="ios-app-holder"><img src="/images/netpay-day-view.png" loading="lazy" alt="NetPay day view" class="ios-app" style="object-fit:cover;"></div>
+                </div>
+                <div class="card-colored-bg-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3-feature icons -->
+  <div class="section">
+    <div class="container">
+      <div class="w-layout-grid grid-3-features">
+        <div class="content">
+          <div>
+            <div class="card-item-content"><img src="/images/aurora-icon.svg" loading="lazy" alt="" class="feature-icon">
+              <h3 class="heading-4-style">Track Every Project</h3>
+              <div class="grey-dim">Log income from every client as soon as it lands. Monthly, quarterly, and annual totals always up to date.</div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card-item-content"><img src="/images/clock.svg" loading="lazy" alt="" class="feature-icon">
+            <h4 class="heading-4-style">No January Surprises</h4>
+            <div class="grey-dim">Real-time self-assessment estimates so you always know how much to set aside for HMRC, before the deadline hits.</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="card-item-content"><img src="/images/link.svg" loading="lazy" alt="" class="feature-icon">
+            <h3 class="heading-4-style">Accounting Integrations</h3>
+            <div class="grey-dim">Xero, QuickBooks, and more. Keep your accountant happy without the manual data entry.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA Card -->
+<div class="section">
+  <div class="container">
+    <div data-w-id="9d538fde-143e-eaa1-2f31-632fd2dff925" class="card card-cta">
+      <div class="content">
+        <h3 class="no-margins"><span>Be first to know<br>when it launches.</span></h3>
+        <div class="cta-button-holder">
+          <a href="/" class="button button-cta w-button">Try Shift Workers Now</a>
+        </div>
+      </div>
+      <div class="card-content">
+        <div>NetPay for Freelancers is coming soon. Join the waitlist and we'll let you know the moment it's ready.</div>
+        <div style="margin-top:20px;">
+          <a href="/android-beta?app=freelancers" class="button w-button">Join waitlist</a>
+        </div>
+        <p class="waitlist-note">Share your name and email on the next page. No spam.</p>
+        <ul role="list" class="list list-cta" style="margin-top:24px;">
+          <li class="list-item">Income &amp; expense tracking</li>
+          <li class="list-item">Real-time self-assessment estimate</li>
+          <li class="list-item">Invoice generation</li>
+          <li class="list-item">Xero &amp; QuickBooks sync</li>
+        </ul>
+      </div>
+      <div id="w-node-_9d538fde-143e-eaa1-2f31-632fd2dff933-d2dff923" class="cta-clients">
+        <div class="clients-list">
+          <div class="grid-clients _1">
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Variable income tracking</div>
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; HMRC self-assessment</div>
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Class 2 &amp; 4 NI</div>
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Invoice generation</div>
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Xero &amp; QuickBooks</div>
+            <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Expense tracking</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-colored-bg"></div>
+    </div>
+  </div>
+</div>
