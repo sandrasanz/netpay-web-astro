@@ -51,4 +51,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap location
-Sitemap: https://netpayuk.com/sitemap.xml
+Sitemap: https://netpayuk.com/sitemap-index.xml
