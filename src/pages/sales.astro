@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketingNavbar from '../components/MarketingNavbar.astro';
+import FooterMarketingFull from '../components/FooterMarketingFull.astro';
+---
+<BaseLayout
+  title="NetPay for Sales: Close the Deal. Know What You Keep."
+  description="Track your commissions as you close deals and see your real take-home after tax: in real time. Join the waitlist."
+  ogDescription="Track your commissions as you close deals and see your real take-home after tax: in real time."
+  wfPageId="699df2c3ff7815c5f95aec49"
+  faviconSet="logo"
+>
+  <style slot="head-extras">
+    .netpay-brand-text {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff 0%, #a0fbcd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    .coming-soon-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(106, 84, 255, 0.2);
+      border: 1px solid rgba(106, 84, 255, 0.4);
+      color: #a89eff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .hero-waitlist-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-waitlist-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      font-family: 'Archivo', sans-serif;
+    }
+    .hero-waitlist-form input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
+    .hero-waitlist-form button {
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #3de85d 0%, #03f6f4 100%);
+      color: #0f0f11;
+      font-weight: 700;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Archivo', sans-serif;
+      white-space: nowrap;
+    }
+    .hero-waitlist-form button:disabled { opacity: 0.7; cursor: default; }
+    .waitlist-note { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 8px; }
+    .sales-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    @media (max-width: 991px) { .sales-features-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 479px) { .sales-features-grid { grid-template-columns: 1fr; } }
+    .sales-feature-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+    .sales-feature-card:hover { border-color: rgba(61,232,93,0.25); }
+    .sales-feature-card h3 {
+      font-family: 'Schibsted Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 0 10px 0;
+    }
+    .sales-feature-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .sales-feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(61,232,93,0.15) 0%, rgba(3,246,244,0.15) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+  </style>
+
+  <MarketingNavbar currentPage="sales" />
+
+  <!-- Hero -->
+  <div class="hero-section">
+    <div class="container hero-container">
+      <div class="secondary-page-holders">
+        <div class="text-hidden">
+          <div style="-webkit-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 110%, 0) scale3d(1, 1, 1) rotateX(27deg) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="hero-text-1">
+            <span class="coming-soon-badge">Coming Soon</span>
+            <h1 class="secondary-page-title"><span class="text-gradient-light">Close the deal.</span><br><span class="text-gradient-colored">Know what you keep.</span></h1>
+          </div>
+        </div>
+        <div id="w-node-_1586c20c-89e5-0f5f-163d-cd92b720bddd-f95aec49" class="content">
+          <div class="hero-description" style="opacity:0;">Commission-based pay is exciting, until you realise how much goes to tax. NetPay for Sales tracks your commissions in real time and shows your actual take-home as you hit your targets.</div>
+        </div>
+        <div class="hero-buttons-holder" style="opacity:0;justify-content:center;">
+          <a href="/android-beta?app=sales" class="button w-button">Join the waitlist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features grid (6 cards, repurposed from pricing section) -->
+  <div data-w-id="8525ffff-f873-120c-8c16-1e8181b0793c" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="section">
+    <div class="container">
+      <div class="text-container left-align">
+        <h2><span class="text-gradient-light">Track every deal.<br>Know your real earnings.</span></h2>
+        <div class="small-content no-auto-margin">
+          <p class="white-50pct">Commission income is exciting, until tax takes its cut. NetPay for Sales gives you a live view of what you're earning and what you'll actually take home after UK Income Tax and National Insurance.</p>
+        </div>
+      </div>
+      <div class="sales-features-grid">
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#128200;</div>
+          <h3>Live Commission Tracking</h3>
+          <p>Log deals as you close them. See your commission stack up in real time, before payday arrives.</p>
+        </div>
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#127981;</div>
+          <h3>Tax &amp; NI Calculations</h3>
+          <p>Commission income is taxed like any other. NetPay shows your take-home after Income Tax and National Insurance, automatically.</p>
+        </div>
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#127919;</div>
+          <h3>Monthly &amp; Quarterly Targets</h3>
+          <p>Set commission goals and track progress. Know exactly how many deals you need to hit your number.</p>
+        </div>
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#128181;</div>
+          <h3>Base + Commission Breakdown</h3>
+          <p>See your base salary and variable commission together, with a clear split of what comes from each source.</p>
+        </div>
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#128203;</div>
+          <h3>Deal Pipeline View</h3>
+          <p>Log deals at different stages and see what your pipeline is worth in potential take-home earnings.</p>
+        </div>
+        <div class="sales-feature-card">
+          <div class="sales-feature-icon">&#128197;</div>
+          <h3>Pay Day Forecast</h3>
+          <p>Predict your next payslip based on deals closed so far this month. No more end-of-month surprises.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works (FAQ accordion structure) -->
+  <div class="section">
+    <div class="container">
+      <div class="text-container left-align">
+        <h2><span class="text-gradient-light">How it works</span></h2>
+        <div class="small-content no-auto-margin">
+          <p class="white-50pct">Three simple steps to know your real commission take-home</p>
+        </div>
+      </div>
+      <div class="w-layout-grid grid-faq">
+        <div id="w-node-f1dc0c78-cadb-50af-31c8-a764dfa6c4cf-f95aec49" class="content">
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">Log your deals as you close them</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">Add each deal to NetPay the moment it closes. Enter the deal value and your commission rate, the app instantly calculates what it means for your take-home pay.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">See your real net earnings after tax</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">NetPay applies the current HMRC Income Tax and National Insurance rates to your combined base salary and commission, showing you what actually lands in your bank account.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">Track targets and forecast your payslip</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">Set monthly or quarterly targets and watch your progress in real time. Use the Pay Day Forecast to predict your next payslip before it arrives, so there are no end-of-month surprises.</p>
+            </div>
+          </div>
+        </div>
+        <div id="w-node-b7c647b4-319e-48d0-bb7f-84c3ba31f00b-f95aec49" class="content">
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">Who is NetPay for Sales built for?</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">NetPay for Sales is built for anyone in a commission-based role, SDRs, AEs, account managers, estate agents, mortgage brokers, and anyone whose pay is part salary, part variable. If commission makes up even 20% of your earnings, the tax impact matters.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">Does it handle complex commission structures?</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">Yes. You can set different commission rates per deal, handle tiered structures, and split out one-off bonuses from recurring commission. NetPay applies the correct UK marginal tax rates across your total earnings for the period.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-item-trigger">
+              <div class="accordion-icon"><img src="/images/arrow-down.svg" loading="lazy" alt="" class="accordion-arrow-bottom"></div>
+              <h2 class="accordion-title">Will it be free?</h2>
+            </div>
+            <div class="accordion-item-content">
+              <p class="grey-dim">Yes. Like all NetPay apps, NetPay for Sales will be completely free. No subscriptions, no hidden fees. We believe every worker deserves to understand their real take-home pay, regardless of how complex their pay structure is.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA section -->
+  <div class="section">
+    <div class="container">
+      <div data-w-id="9d538fde-143e-eaa1-2f31-632fd2dff925" class="card card-cta">
+        <div class="content">
+          <h3 class="no-margins"><span>Be first to know<br>when it launches.</span></h3>
+          <div class="cta-button-holder">
+            <a href="/" class="button button-cta w-button">Try Shift Workers Now</a>
+          </div>
+        </div>
+        <div class="card-content">
+          <div>NetPay for Sales is coming soon. Join the waitlist and we'll let you know the moment it's ready, free, forever.</div>
+          <div style="margin-top:20px;">
+            <a href="/android-beta?app=sales" class="button w-button">Join waitlist</a>
+          </div>
+          <ul role="list" class="list list-cta" style="margin-top:24px;">
+            <li class="list-item">Live commission tracking</li>
+            <li class="list-item">Tax &amp; NI calculations</li>
+            <li class="list-item">Monthly &amp; quarterly targets</li>
+            <li class="list-item">Pay day forecast</li>
+          </ul>
+        </div>
+        <div id="w-node-_9d538fde-143e-eaa1-2f31-632fd2dff933-d2dff923" class="cta-clients">
+          <div class="clients-list">
+            <div class="grid-clients _1">
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Commission tracking</div>
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Income Tax &amp; NI</div>
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Base + commission split</div>
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Deal pipeline view</div>
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Target tracking</div>
+              <div class="trusted-by-grid-content" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.55);font-size:13px;">&#10003; Pay day forecast</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-colored-bg"></div>
+      </div>
+    </div>
+  </div>
+
+  <FooterMarketingFull currentPage="sales" subscribeFormSuffix="sales" androidVariant="sales" />
+
+  <div class="preloader">
+    <div class="preloader-bg"></div>
+    <img src="/images/netpaylogo.svg" alt="NetPay" style="height:36px;display:block;">
+  </div>
+</BaseLayout>
