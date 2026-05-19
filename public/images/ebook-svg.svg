@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="277" height="195" viewBox="0 0 277 195">
+    <defs>
+        <linearGradient id="5ks1mkeg7a" x1="33.513%" x2="70.52%" y1="-1.017%" y2="100.575%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#CCBED5"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                            <path stroke="#FCB80F" d="M72 72L0 108 72 144 144 108z" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) translate(68 49)"/>
+                            <path stroke="#37CC79" d="M72 36L0 72 72 108 144 72z" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) translate(68 49)"/>
+                            <path stroke="#742EFF" d="M72 0L0 36 72 72 144 36z" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) translate(68 49)"/>
+                        </g>
+                        <g>
+                            <path fill="url(#5ks1mkeg7a)" fill-rule="nonzero" d="M72 48c0 4.418-3.582 8-8 8H16L0 72V8c0-4.418 3.582-8 8-8h56c4.418 0 8 3.582 8 8v40z" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) matrix(-1 0 0 1 72 0)"/>
+                            <path fill="#13CC78" d="M12.857 12.857H63V18H12.857zM30.857 21.857H63V27H30.857z" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) matrix(-1 0 0 1 72 0)"/>
+                        </g>
+                        <g fill="url(#5ks1mkeg7a)" fill-rule="nonzero" transform="translate(-1054 -1550) translate(932 1281) translate(122 269) translate(223 98)">
+                            <path d="M54 25.5c.01 3.96-.915 7.866-2.7 11.4-4.317 8.638-13.143 14.096-22.8 14.1-3.96.01-7.866-.915-11.4-2.7L0 54l5.7-17.1C3.915 33.366 2.99 29.46 3 25.5c.004-9.657 5.462-18.483 14.1-22.8C20.634.915 24.54-.01 28.5 0H30c12.947.714 23.286 11.053 24 24v1.5z"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

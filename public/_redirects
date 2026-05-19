@@ -1,0 +1,41 @@
+# Netlify _redirects for netpayuk.com
+# Last updated: 18 May 2026
+# Docs: https://docs.netlify.com/routing/redirects/
+
+# ============================================================
+# Canonical domain enforcement (also handled by Netlify primary
+# domain settings, but committed here as source of truth)
+# ============================================================
+
+http://netpayuk.com/*           https://netpayuk.com/:splat    301!
+http://www.netpayuk.com/*       https://netpayuk.com/:splat    301!
+https://www.netpayuk.com/*      https://netpayuk.com/:splat    301!
+
+# ============================================================
+# Kill netpayuk.app — redirect everything to .com
+# (only active if netpayuk.app is added as a Netlify domain alias)
+# ============================================================
+
+https://netpayuk.app/*          https://netpayuk.com/:splat    301!
+https://www.netpayuk.app/*      https://netpayuk.com/:splat    301!
+http://netpayuk.app/*           https://netpayuk.com/:splat    301!
+http://www.netpayuk.app/*       https://netpayuk.com/:splat    301!
+
+# ============================================================
+# Page-level redirects
+# ============================================================
+
+# Consolidate duplicate privacy pages
+/privacy-policy.html            /privacy.html                  301!
+
+# Pretty URL fallbacks (so people typing /privacy or /sales also work)
+/privacy                        /privacy.html                  301
+/terms                          /terms.html                    301
+/sales                          /sales.html                    301
+/freelancers                    /freelancers.html              301
+/features                       /features.html                 301
+/contact                        /contact.html                  301
+/about                          /company.html                  301
+/insights                       /insights.html                 301
+/delete-account                 /delete-account.html           301
+/android-beta                   /android-beta.html             301

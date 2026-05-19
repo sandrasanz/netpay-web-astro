@@ -1,0 +1,54 @@
+# robots.txt for netpayuk.com
+# Last updated: 18 May 2026
+#
+# Strategy: open access to all legitimate crawlers, including AI crawlers.
+# NetPay wants to be cited in AI Overviews, ChatGPT search, Perplexity, etc.
+# Per-page noindex meta tags handle pages we don't want indexed.
+
+# Default: allow all crawlers everywhere
+User-agent: *
+Allow: /
+
+# Explicitly welcome major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Explicitly welcome AI crawlers (they cite back to the source)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap location
+Sitemap: https://netpayuk.com/sitemap.xml
