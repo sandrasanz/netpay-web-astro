@@ -1,12 +1,13 @@
 ---
 export interface Props {
-  currentPage?: 'home' | 'freelancers' | 'sales';
+  currentPage?: 'home' | 'freelancers' | 'sales' | 'insights';
 }
 const { currentPage } = Astro.props;
 
 const homeCurrent = currentPage === 'home';
 const freelancersCurrent = currentPage === 'freelancers';
 const salesCurrent = currentPage === 'sales';
+const insightsCurrent = currentPage === 'insights';
 ---
 <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-no-scroll="1" data-duration="500" data-doc-height="1">
   <div class="container nav-container">
@@ -31,6 +32,12 @@ const salesCurrent = currentPage === 'sales';
           <div class="nav-link-holder">
             <a href="/sales" {...(salesCurrent ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${salesCurrent ? ' w--current' : ''}`}>
               <div>Sales</div>
+              <div class="link-background"></div>
+            </a>
+          </div>
+          <div class="nav-link-holder">
+            <a href="/insights" {...(insightsCurrent ? { 'aria-current': 'page' } : {})} class={`nav-link w-inline-block${insightsCurrent ? ' w--current' : ''}`}>
+              <div>Insights</div>
               <div class="link-background"></div>
             </a>
           </div>
