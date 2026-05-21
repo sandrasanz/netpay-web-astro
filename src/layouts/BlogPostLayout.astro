@@ -1,0 +1,293 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import LegacyNavbar from '../components/LegacyNavbar.astro';
+import FooterLegacy from '../components/FooterLegacy.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export interface Props {
+  entry: CollectionEntry<'blog'>;
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+// Format dates for display
+const publishDateFormatted = data.publishDate.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+const lastUpdatedFormatted = data.lastUpdated?.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+
+// ISO dates for schema
+const publishDateISO = data.publishDate.toISOString();
+const lastUpdatedISO = (data.lastUpdated ?? data.publishDate).toISOString();
+
+// Canonical URL
+const canonical = new URL(`/insights/${entry.slug}/`, Astro.site).toString();
+
+// Article JSON-LD schema
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": data.title,
+  "description": data.description,
+  "author": {
+    "@type": "Person",
+    "name": "Sandra Sanz",
+    "url": "https://netpayuk.com/company",
+    "jobTitle": "Founder & CEO, NetPay UK"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NetPay UK",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://netpayuk.com/images/netpay-logo.png"
+    }
+  },
+  "datePublished": publishDateISO,
+  "dateModified": lastUpdatedISO,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonical
+  },
+  "keywords": [data.targetKeyword, ...data.secondaryKeywords].join(', '),
+  "image": data.ogImage ? `https://netpayuk.com${data.ogImage}` : 'https://netpayuk.com/images/netpay-logo.png'
+};
+
+// FAQ schema (only if FAQs are defined)
+const faqSchema = data.faqs && data.faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+} : null;
+
+// Fetch related posts (if specified)
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const relatedPosts = data.relatedPosts
+  .map(slug => allPosts.find(p => p.slug === slug))
+  .filter((p): p is CollectionEntry<'blog'> => p !== undefined)
+  .slice(0, 3);
+
+// If no related posts specified, fall back to other posts in same cluster
+const fallbackRelated = relatedPosts.length === 0
+  ? allPosts
+      .filter(p => p.slug !== entry.slug && p.data.cluster === data.cluster)
+      .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+      .slice(0, 3)
+  : [];
+
+const displayedRelated = relatedPosts.length > 0 ? relatedPosts : fallbackRelated;
+---
+<BaseLayout
+  title={`${data.title} — NetPay UK`}
+  description={data.description}
+  canonical={canonical}
+  ogImage={data.ogImage}
+  wfPageId="699df2c3ff7815c5f95aec46"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  </Fragment>
+
+  <LegacyNavbar currentPage="insights" />
+
+  <!-- ARTICLE HERO -->
+  <article style="padding-top: 80px; padding-bottom: 40px;">
+    <div class="container">
+      <div style="max-width: 760px; margin: 0 auto;">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" style="font-size: 14px; opacity: 0.65; margin-bottom: 16px;">
+          <a href="/" style="color: inherit; text-decoration: none;">Home</a>
+          <span style="margin: 0 8px;">›</span>
+          <a href="/insights" style="color: inherit; text-decoration: none;">Insights</a>
+        </nav>
+
+        <!-- Cluster tag -->
+        <div style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; margin-bottom: 12px;">
+          {data.cluster.replace(/^[A-F]\. /, '')}
+        </div>
+
+        <!-- Title -->
+        <h1 style="font-size: 44px; line-height: 1.15; margin-bottom: 20px;">
+          <span class="text-gradient-colored">{data.title}</span>
+        </h1>
+
+        <!-- Meta -->
+        <div style="font-size: 14px; opacity: 0.7; margin-bottom: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <span>By Sandra Sanz</span>
+          <span>·</span>
+          <time datetime={publishDateISO}>Published {publishDateFormatted}</time>
+          {lastUpdatedFormatted && lastUpdatedFormatted !== publishDateFormatted && (
+            <>
+              <span>·</span>
+              <time datetime={lastUpdatedISO}>Updated {lastUpdatedFormatted}</time>
+            </>
+          )}
+        </div>
+
+        <!-- Lede / description -->
+        <p style="font-size: 20px; line-height: 1.5; opacity: 0.85; margin-bottom: 48px; font-weight: 300;">
+          {data.description}
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ARTICLE BODY -->
+  <div class="container" style="padding-bottom: 60px;">
+    <div class="blog-prose" style="max-width: 720px; margin: 0 auto; font-size: 18px; line-height: 1.7;">
+      <slot />
+    </div>
+  </div>
+
+  <!-- FAQ (if present) -->
+  {data.faqs && data.faqs.length > 0 && (
+    <div class="container" style="padding-bottom: 60px;">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <h2 class="text-gradient-light" style="font-size: 32px; margin-bottom: 24px;">Frequently asked questions</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          {data.faqs.map(faq => (
+            <details style="padding: 20px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+              <summary style="font-size: 17px; font-weight: 600; cursor: pointer;">{faq.question}</summary>
+              <p style="font-size: 16px; line-height: 1.6; margin-top: 12px; opacity: 0.85;">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+
+  <!-- APP CTA -->
+  <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+    <div style="max-width: 720px; margin: 0 auto; padding: 32px; background: rgba(255,255,255,0.04); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); text-align: center;">
+      <h3 style="font-size: 24px; margin-bottom: 12px;">Want to see your actual take-home pay?</h3>
+      <p style="font-size: 16px; line-height: 1.6; opacity: 0.85; margin-bottom: 24px;">
+        NetPay UK calculates your real net pay after tax, NI, pension, and salary sacrifice — for hourly, shift, and variable-income workers. Free to download.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+        <a href="https://apps.apple.com/gb/app/netpay-uk-salary-tracker/id6757113332" target="_blank" rel="noopener noreferrer" class="button w-button">Download for iOS</a>
+        <a href="https://play.google.com/store/apps/details?id=io.bluka.uknetpay" target="_blank" rel="noopener noreferrer" class="button w-button">Download for Android</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED POSTS -->
+  {displayedRelated.length > 0 && (
+    <div class="container" style="padding-top: 40px; padding-bottom: 80px;">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <h2 class="text-gradient-light" style="font-size: 28px; margin-bottom: 24px;">Read next</h2>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+          {displayedRelated.map(post => (
+            <li>
+              <a href={`/insights/${post.slug}/`} style="display: block; padding: 20px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); color: inherit; text-decoration: none; transition: background 0.2s;">
+                <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; margin-bottom: 4px;">
+                  {post.data.cluster.replace(/^[A-F]\. /, '')}
+                </div>
+                <div style="font-size: 18px; font-weight: 600;">{post.data.title}</div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
+
+  <!-- DISCLAIMER (YMYL E-E-A-T requirement for financial content) -->
+  <div class="container" style="padding-bottom: 60px;">
+    <div style="max-width: 720px; margin: 0 auto; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+      <p style="font-size: 13px; line-height: 1.6; opacity: 0.7; margin: 0;">
+        <strong>A note on financial advice:</strong> NetPay UK calculates take-home pay based on official HMRC tax rules. This article reflects rules in force at the time of publication ({publishDateFormatted}). Tax rules change. For complex situations, consult a qualified UK accountant or visit <a href="https://www.gov.uk/income-tax" target="_blank" rel="noopener noreferrer" style="color: #3de85d;">gov.uk/income-tax</a>.
+      </p>
+    </div>
+  </div>
+
+  <FooterLegacy currentPage="insights" wfPageId="699df2c3ff7815c5f95aec46" />
+
+  <style is:global>
+    /* Prose styling — applies inside .blog-prose only */
+    .blog-prose h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin: 48px 0 16px;
+      font-weight: 600;
+    }
+    .blog-prose h3 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 36px 0 12px;
+      font-weight: 600;
+    }
+    .blog-prose p {
+      margin: 0 0 20px;
+    }
+    .blog-prose ul, .blog-prose ol {
+      margin: 0 0 20px;
+      padding-left: 24px;
+    }
+    .blog-prose li {
+      margin-bottom: 10px;
+    }
+    .blog-prose a {
+      color: #3de85d;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .blog-prose a:hover {
+      opacity: 0.8;
+    }
+    .blog-prose strong {
+      font-weight: 700;
+    }
+    .blog-prose blockquote {
+      border-left: 3px solid #3de85d;
+      padding-left: 20px;
+      margin: 28px 0;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    .blog-prose code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .blog-prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 16px;
+    }
+    .blog-prose th {
+      text-align: left;
+      padding: 12px 8px;
+      border-bottom: 2px solid rgba(255,255,255,0.15);
+      font-weight: 600;
+    }
+    .blog-prose td {
+      padding: 10px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .blog-prose hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 40px 0;
+    }
+    .blog-prose img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+  </style>
+</BaseLayout>
