@@ -32,8 +32,18 @@ Read it first. It contains:
 **Other useful context files in `/Users/sandrasanzgonzalez/Documents/Claude/Projects/NetPay UK/`:**
 - `CONTEXT.md` — full business context (NetPay UK, Bluka Labs, target market, etc.)
 - `SEO_Foundations.md` — what we shipped today (Steps 1–8 of SEO setup, all complete)
+- `SEO_Strategy_Review_2026-05-28.md` — **Semrush audit findings. READ THIS BEFORE WRITING NEW BLOG POSTS.** Documents that the editorial calendar's volume estimates are systematically inflated 5-30x. Includes corrected priorities, head-term opportunities, and the calculator-first principle.
+- `Calculator_Hub_Spec.md` — the build spec for the /calculators/ landing page strategy. The highest-leverage SEO move on the roadmap.
+- `Backlink_Sprint_90day.md` — 90-day plan to move netpayuk.com from Authority Score 7 to 25+.
 - `NetPay_UK_CEO_Plan.md` — the longer-term strategy doc
 - `NOTES.md` — running log of decisions
+
+## SEO operating principles (post-28-May audit)
+
+1. **Calculator pages > blog pages for head terms.** The biggest single SEO win is shipping `/calculators/take-home-pay/`. Blog content supports it; it doesn't replace it.
+2. **Verify keyword volumes before drafting any post.** The calendar overstates volumes by 5-30x. Every draft session should re-check the target keyword in Semrush before writing. The scheduled-task brief was wrong; don't trust calendar volume tiers without verification.
+3. **Pay scale and tax-threshold accuracy is sacred.** The 28 May nurse post nearly shipped with wrong NHS Band 5 figures. Every post that references numerical data (tax codes, NI rates, pay bands, allowances) must cite the official source and the source must be checked at draft time.
+4. **Role-based posts: "X salary UK" usually outranks "X take home pay".** Teacher, HGV, NHS Band 5/6 all retargeted post-audit. Test the framing before drafting.
 
 ## Current production site (DO NOT TOUCH during migration)
 
@@ -87,6 +97,17 @@ If something tempts scope creep, add it to a `BACKLOG.md` and keep migrating.
 - Google Search Console: verified at `sc-domain:netpayuk.com` (Sandra's `sandrasanzgonzalez@gmail.com`)
 - Bing Webmaster Tools: imported from GSC
 - Netlify project (production): the one currently serving netpayuk.com
+
+## Writing style rules (blog posts and any prose)
+
+- **No forward slashes in prose.** Sandra dislikes constructions like `tax/NI`, `Band 5/6`, `8pm/6am`, `Pret/Costa/Starbucks`, or `5.2% / 6.5% / 8.3%`. Use commas, "and", "or", or em-dashes instead. Examples:
+  - ❌ `income tax/NI/pension` → ✅ `income tax, NI, and pension`
+  - ❌ `Band 5/Band 6` → ✅ `Band 5 and Band 6`
+  - ❌ `W1/M1` → ✅ `W1 or M1`
+  - ❌ `Pret/Costa/Starbucks` → ✅ `Pret, Costa, and Starbucks`
+- **Exceptions** (slashes are fine here): tax year notation `2026/27`, URLs `/insights/foo`, file paths, and HTML/CSS code.
+- UK English spelling throughout (organise, behaviour, favourite, specialise).
+- Follow the rest of the voice rules in the scheduled-task brief (anti-cliché blocklist, worked examples, first-person where it fits).
 
 ## Tone for working with Sandra
 
